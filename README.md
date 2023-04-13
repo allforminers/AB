@@ -141,6 +141,15 @@ sudo ufw allow 3256/tcp
 sudo ufw allow 80/tcp
 
 sudo ufw --force enable
+
+sudo ufw allow ssh
+
+
+check status
+
+sudo ufw status
+
+
  
 
 node init.js
