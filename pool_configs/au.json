@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "coin": "au.json",
 
     "address": "aZgV5pFQSYoLnuX1diGTCNy7GYyNqMWC8e",
@@ -34,7 +34,7 @@
 
     "ports": {
         "3187": {
-            "diff": 50000
+            "diff": 500000
         },
         "3188": {
             "diff": 500000,
@@ -49,7 +49,7 @@
             }
         },
         "3189": {
-            "diff": 1000000
+            "diff": 500000
         }
     },
 
