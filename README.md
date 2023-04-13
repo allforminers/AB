@@ -25,7 +25,7 @@ sudo apt-get update
 
 sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
-sudo apt install libevent-dev
+sudo apt install libevent-dev -y
 
 git clone https://github.com/allforminers/AB.git
 
