@@ -65,7 +65,9 @@ sudo systemctl start fail2ban
 
 sudo systemctl enable fail2ban
 
-nano /etc/fail2ban/jail.d/ddos.conf
+***********************************
+
+sudo nano /etc/fail2ban/jail.d/ddos.conf
 
 [http-get-dos]
 enabled = true
@@ -78,16 +80,22 @@ bantime = 600
 
 ctrl-x
 
+***********************************
+
 nano /etc/fail2ban/filter.d/http-get-dos.conf
 
 [Definition]
 failregex = ^<HOST> -.*"(GET|POST).*
 ignoreregex =
 
+***********************************
+
 sudo rm /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
 
 # Custom jail.local configuration
+
+***********************************
 
 [DEFAULT]
 ignoreip = 127.0.0.1/8 35.233.127.215 35.230.107.13 34.77.152.108 34.82.223.150
@@ -100,6 +108,8 @@ enabled = true
 
 [apache]
 enabled = true
+
+***********************************
 
 ctrl-x
 
@@ -131,10 +141,9 @@ sudo ufw --force enable
 
 node init.js
 
+***********************************
 
-after reboot server 
-
-must 
+# after reboot server must 
 
 redis-server --daemonize yes
 
