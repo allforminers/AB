@@ -37,7 +37,13 @@ cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitco
 
 cd
 
+chmod -R 777 /root
+
 rm -r node_modules/
+
+sudo apt-get install libgmp-dev -y
+
+npm install multi-hashing
 
 npm update
 
