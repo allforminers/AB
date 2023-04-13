@@ -37,6 +37,8 @@ cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitco
 
 cd
 
+rm -r node_modules/
+
 npm update
 
 npm install
