@@ -1,4 +1,4 @@
-
+***********************************
 
 sudo add-apt-repository ppa:chris-lea/redis-server -y
 
@@ -7,6 +7,8 @@ sudo apt-get update
 sudo apt -y install redis-server -y
 
 nano /etc/redis/redis.conf
+
+***********************************
 
 
 sudo apt install nodejs node-gyp libssl1.0-dev -y
@@ -39,9 +41,12 @@ npm update
 
 npm install
 
+***********************************
 
 chmod -R 777 bitcoind bitcoin-cli bitcoin-tx aurum-cli aurum-tx aurum-wallet aurumd
 
+
+***********************************
 
 sudo ufw allow 3187/tcp
 
