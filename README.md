@@ -132,6 +132,10 @@ sudo ufw --force enable
 node init.js
 
 
+after reboot server 
 
+must 
+
+redis-server --daemonize yes
 
 
