@@ -43,11 +43,15 @@ rm -r node_modules/
 
 sudo apt-get install libgmp-dev -y
 
-npm install multi-hashing
-
 npm update
 
 npm install
+
+or
+
+npm install multi-hashing
+
+
 
 ***********************************
 
