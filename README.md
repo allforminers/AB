@@ -47,6 +47,8 @@ npm update
 
 npm install
 
+redis-server --daemonize yes
+
 or
 
 npm install multi-hashing
@@ -82,8 +84,6 @@ sudo ufw allow 80/tcp
 
 sudo ufw --force enable
  
- 
-redis-server --daemonize yes
 
 node init.js
 
