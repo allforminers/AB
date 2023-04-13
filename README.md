@@ -106,6 +106,8 @@ ctrl-x
 
 ***********************************
 
+```
+
 sudo ufw allow 3187/tcp
 
 sudo ufw allow 3188/tcp
@@ -130,6 +132,8 @@ sudo ufw --force enable
  
 
 node init.js
+
+```
 
 
 after reboot server 
