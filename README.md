@@ -138,7 +138,13 @@ sudo ufw allow 6379/tcp
 
 sudo ufw allow 3256/tcp
 
+sudo ufw allow 3008/tcp
+
 sudo ufw allow 80/tcp
+
+sudo ufw allow 17117/tcp
+
+sudo ufw allow 6379/tcp
 
 sudo ufw --force enable
 
