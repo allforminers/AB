@@ -1,0 +1,84 @@
+{
+    "enabled": true,
+    "coin": "au.json",
+
+    "address": "aZgV5pFQSYoLnuX1diGTCNy7GYyNqMWC8e",
+
+    "rewardRecipients": {
+        "aZBvSa32VMkMyzYnyYjaVt58xHHTBpK2dK": 60.0
+    },
+ "BTCover17": true,
+
+     "paymentProcessing": {
+	      "minConf": 102,
+        "enabled": true,
+        "paymentMode": "prop",
+        "_comment_paymentMode":"prop, pplnt",
+        "paymentInterval": 120,
+        "minimumPayment": 50000.0,
+        "maxBlocksPerPayment": 3,
+        "daemon": {
+              "host": "127.0.0.1",
+            "port": 9818,
+            "user": "auruhfgjkk",
+            "password": "aurugglllll"
+        }
+    },
+
+    "tlsOptions": {
+        "enabled": false,
+        "serverKey": "",
+        "serverCert": "",
+        "ca": ""
+    },
+
+    "ports": {
+        "3187": {
+            "diff": 50000
+        },
+        "3188": {
+            "diff": 500000,
+            "varDiff": {
+                "minDiff": 500000,
+                "maxDiff": 500000000,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3189": {
+            "diff": 1000000
+        }
+    },
+
+    "poolId": "main",
+    "_comment_poolId": "use it for region identification: eu, us, asia or keep default if you have one stratum instance for one coin",
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 9818,
+            "user": "auruhfgjkk",
+            "password": "aurugglllll"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 9999,
+        "disableTransactions": true
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "",
+        "password": "",
+        "database": "",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+
+}

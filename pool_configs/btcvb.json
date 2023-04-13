@@ -1,0 +1,80 @@
+{
+
+    "enabled": true,
+    "coin": "btcvb.json",
+
+    "address": "1GHAb64xdkQQF7yfLrU4VCdWbDCzJtpX5E",
+	"asicBoost": true,
+
+    "rewardRecipients": {
+        "1EpPFCPpPr1fY7VBGfVdTeq9noiWVATJQA": 0.0
+
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 120,
+        "minimumPayment": 1000000,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 21402,
+            "user": "wedffhfgjkk",
+            "password": "wefgfgglllll"
+        }
+    },
+
+	
+    "ports": {
+    "3008": {
+        "diff": 2000000
+    },
+    "3032": {
+        "diff": 500000,
+        "varDiff": {
+            "minDiff": 500000,
+            "maxDiff": 100000000,
+            "targetTime": 15,
+            "retargetTime": 90,
+            "variancePercent": 30,
+			"algo": "sha256",
+			"asicBoost": true
+        }
+    },
+    "3256": {
+        "diff": 1000000
+    },
+    "3333": {
+        "diff": 2000000,
+        "algo": "sha256",
+        "asicBoost": true
+    }
+},
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 21402,
+            "user": "wedffhfgjkk",
+            "password": "wefgfgglllll"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": true
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+
+}

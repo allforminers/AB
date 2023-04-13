@@ -1,0 +1,6 @@
+{
+  "name": "A",
+    "symbol": "A",
+    "algorithm": "sha256",
+    "version_mask": "1000"
+}
