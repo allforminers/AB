@@ -43,7 +43,9 @@
                 "maxDiff": 500000000,
                 "targetTime": 15,
                 "retargetTime": 90,
-                "variancePercent": 30
+                "variancePercent": 30,
+				"algo": "sha256",
+				"asicBoost": true
             }
         },
         "3189": {
