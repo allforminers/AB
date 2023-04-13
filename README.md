@@ -57,7 +57,51 @@ npm install multi-hashing
 
 ***********************************
 
-chmod -R 777 bitcoind bitcoin-cli bitcoin-tx aurum-cli aurum-tx aurum-wallet aurumd
+DDos firewall
+
+sudo apt-get install fail2ban -y
+
+sudo systemctl start fail2ban
+
+sudo systemctl enable fail2ban
+
+nano /etc/fail2ban/jail.d/ddos.conf
+
+[http-get-dos]
+enabled = true
+port = http,https
+filter = http-get-dos
+logpath = /var/log/nginx/access.log
+maxretry = 300
+findtime = 30
+bantime = 600
+
+ctrl-x
+
+nano /etc/fail2ban/filter.d/http-get-dos.conf
+
+[Definition]
+failregex = ^<HOST> -.*"(GET|POST).*
+ignoreregex =
+
+sudo rm /etc/fail2ban/jail.local
+sudo nano /etc/fail2ban/jail.local
+
+# Custom jail.local configuration
+
+[DEFAULT]
+ignoreip = 127.0.0.1/8 35.233.127.215 35.230.107.13 34.77.152.108 34.82.223.150
+bantime  = 3600
+findtime = 600
+maxretry = 3
+
+[sshd]
+enabled = true
+
+[apache]
+enabled = true
+
+ctrl-x
 
 
 ***********************************
