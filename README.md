@@ -27,6 +27,8 @@ sudo apt install libevent-dev
 
 git clone https://github.com/allforminers/AB.git
 
+chmod -R 777 AB
+
 cd AB
 
 cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/ /root/
