@@ -11,6 +11,10 @@ dos2unix scrypt-all.sh
 
 dos2unix scrypt.sh
 
+dos2unix vp-noip.sh
+
+dos2unix vp.sh
+
 chmod +x scrypt-all.sh
 
 chmod +x scrypt.sh
