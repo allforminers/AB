@@ -163,10 +163,45 @@ node init.js
 ```
 
 
+
 after reboot server 
 
 must 
 
 redis-server --daemonize yes
+
+```
+
+apt install ipset
+
+sudo apt-get update
+sudo apt-get install ipset iptables
+
+cd /home/user/scripts/
+
+chmod +x scrypt.sh
+
+chmod +x scrypt-all.sh
+
+sudo apt-get update
+sudo apt-get install dos2unix
+
+dos2unix scrypt-all.sh
+
+dos2unix scrypt.sh
+
+chmod +x scrypt-all.sh
+
+chmod +x scrypt.sh
+
+sudo ./scrypt-all.sh
+
+or
+
+sudo ./scrypt.sh
+
+```
+
+DONE 
 
 
