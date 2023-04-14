@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# Create 8GB swap
-sudo fallocate -l 8G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+# Check if swap is already enabled
+if ! swapon --show | grep -q '/swapfile'; then
+    # Create and enable swap file
+    sudo fallocate -l 8G /swapfile
+    sudo chmod 600 /swapfile
+    sudo mkswap /swapfile
+    sudo swapon /swapfile
+    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+fi
 
 # Update package lists and install Redis
 sudo add-apt-repository ppa:chris-lea/redis-server -y
@@ -30,13 +33,18 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 # Clone AB repository and set permissions
 git clone https://github.com/allforminers/AB.git
-sudo mv AB /root/
-sudo chown -R root:root /root/AB/
-cd /root/AB/
-chmod -R 777 .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml coins pool_configs scrypt.sh scrypt-all.sh Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/
+sudo chmod -R 777 AB
+
+# Copy necessary files to root directory
+cd AB
+cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml coins pool_configs scrypt.sh scrypt-all.sh Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/ /root/
+
+
+# Set permissions for root directory
+sudo chmod -R 777 /root
 
 # Remove any existing node_modules and update npm packages
-sudo rm -rf /root/AB/node_modules
+
 sudo npm update
 
 # Allow necessary ports through firewall
@@ -58,12 +66,12 @@ sudo ufw allow 6379/tcp
 sudo ufw --force disable
 sudo ufw allow ssh
 
-# Install npm packages
-sudo npm install 
+# Install necessary npm packages
+cd /root/AB
+sudo npm install
 
 # Start Redis server
 sudo redis-server --daemonize yes
 
-# Change to root directory and run init.js
-cd /root/
-node init.js
+# Run init.js
+sudo node init.js
