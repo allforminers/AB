@@ -1,23 +1,13 @@
 #!/bin/bash
 
-# Check if swap is already on
-if [ "$(sudo swapon --show)" ]; then
-    echo "Swap is already on."
-    exit 0
+# Check if swap is enabled, and if not, create a swap file of 8GB
+if ! swapon --show; then
+  sudo fallocate -l 8G /swapfile
+  sudo chmod 600 /swapfile
+  sudo mkswap /swapfile
+  sudo swapon /swapfile
+  echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 fi
-
-# Create swapfile and set permissions
-sudo fallocate -l 8G /swapfile
-sudo chmod 600 /swapfile
-
-# Add swap to partition
-sudo mkswap /swapfile
-
-# Turn swap on
-sudo swapon /swapfile
-
-# Add swap entry to /etc/fstab
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 # Update package lists and install Redis
 sudo add-apt-repository ppa:chris-lea/redis-server -y
@@ -42,19 +32,16 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 # Clone AB repository and set permissions
 git clone https://github.com/allforminers/AB.git
-sudo chown -R root:root AB
 sudo chmod -R 777 AB
+sudo mv AB /root/
 
 # Copy necessary files to root directory
-cd AB
+cd /root/AB
 sudo cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml coins pool_configs scrypt.sh scrypt-all.sh Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/ /root/
+
 
 # Set permissions for root directory
 sudo chmod -R 777 /root
-
-# Remove any existing node_modules and update npm packages
-sudo rm -rf /root/node_modules
-sudo npm update
 
 # Allow necessary ports through firewall
 sudo ufw allow 3187/tcp
@@ -75,10 +62,10 @@ sudo ufw allow 6379/tcp
 sudo ufw --force disable
 sudo ufw allow ssh
 
-# Install npm packages
+# Install npm packages and start Redis
 sudo npm install
-
-# Start Redis server
 sudo redis-server --daemonize yes
 
-# Change working directory to /root/AB and start init
+# Change to root directory and run init.js
+cd /root
+sudo node init.js
