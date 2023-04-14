@@ -7,6 +7,18 @@ cd AB
 
 chmod +x vp.sh vp-noip.sh
 
+dos2unix scrypt-all.sh
+
+dos2unix scrypt.sh
+
+chmod +x scrypt-all.sh
+
+chmod +x scrypt.sh
+
+sudo ./scrypt-all.sh
+
+
+
 sudo ./vp-noip.sh
 
 sudo ./vp.sh
