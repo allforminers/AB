@@ -1,7 +1,7 @@
 {
 
     "enabled": true,
-    "coin": "btcvb.json",
+    "coin": "btc.json",
 
     "address": "1GHAb64xdkQQF7yfLrU4VCdWbDCzJtpX5E",
 	"asicBoost": true,
