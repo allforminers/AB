@@ -1,9 +1,11 @@
 ***********************************
 apt install git -y
 
-git clone https://github.com/allforminers/AB.git -y
+git clone https://github.com/allforminers/AB.git
 
 cd AB
+
+***********************************
 
 chmod +x vp.sh vp-noip.sh
 
