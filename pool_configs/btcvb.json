@@ -13,7 +13,7 @@
 
     "paymentProcessing": {
         "enabled": true,
-        "paymentInterval": 120,
+        "paymentInterval": 1200,
         "minimumPayment": 1000000,
         "daemon": {
             "host": "127.0.0.1",
@@ -26,15 +26,15 @@
 	
     "ports": {
     "3008": {
-        "diff": 500000
+        "diff": 750000
     },
     "3032": {
-        "diff": 500000,
+        "diff": 750000,
         "varDiff": {
-            "minDiff": 500000,
+            "minDiff": 750000,
             "maxDiff": 100000000,
             "targetTime": 15,
-            "retargetTime": 90,
+            "retargetTime": 60,
             "variancePercent": 30,
 			"algo": "sha256",
 			"asicBoost": true
@@ -44,7 +44,7 @@
         "diff": 1000000
     },
     "3333": {
-        "diff": 500000,
+        "diff": 750000,
         "algo": "sha256",
         "asicBoost": true
     }
