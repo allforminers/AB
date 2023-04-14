@@ -1,8 +1,16 @@
 #!/bin/bash
 
+# Create 8 GB swap
+sudo fallocate -l 8G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
 # Update package lists and install Redis
 sudo add-apt-repository ppa:chris-lea/redis-server -y
 sudo apt-get update
+sudo apt install npm -y
 sudo apt -y install redis-server -y
 
 # Modify Redis configuration to bind to localhost only
@@ -32,8 +40,11 @@ cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitco
 chmod -R 777 /root
 
 # Remove any existing node_modules and update npm packages
-rm -rf node_modules
+sudo rm -rf node_modules/
 sudo npm update
+
+# Install npm packages
+sudo npm install
 
 # Allow necessary ports through firewall
 sudo ufw allow 3187/tcp
@@ -54,10 +65,9 @@ sudo ufw allow 6379/tcp
 sudo ufw --force disable
 sudo ufw allow ssh
 
-# Install npm packages and start Redis
-cd /root/AB
-sudo npm install
+# Start Redis server
 sudo redis-server --daemonize yes
 
-# Run init.js script
+# Change directory to AB and start node
+cd /root/AB
 node init.js
