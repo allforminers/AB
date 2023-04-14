@@ -37,7 +37,6 @@ chmod -R 777 /root
 
 sudo npm update
 
-sudo npm install 
 
 
 # Allow necessary ports through firewall
@@ -58,5 +57,8 @@ sudo ufw allow 6379/tcp
 # Disable firewall and allow SSH connections
 sudo ufw --force disable
 sudo ufw allow ssh
+
+
+sudo npm install 
 
 
