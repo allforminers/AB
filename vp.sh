@@ -61,4 +61,8 @@ sudo ufw allow ssh
 
 sudo npm install 
 
+sudo redis-server --daemonize yes
+
+
+
 
