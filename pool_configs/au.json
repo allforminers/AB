@@ -37,15 +37,15 @@
             "diff": 500000
         },
         "3188": {
-            "diff": 500000,
-            "varDiff": {
-                "minDiff": 500000,
-                "maxDiff": 500000000,
-                "targetTime": 15,
-                "retargetTime": 90,
-                "variancePercent": 30,
-				"algo": "sha256",
-				"asicBoost": true
+                   "diff": 750000,
+        "varDiff": {
+            "minDiff": 750000,
+            "maxDiff": 1000000,
+            "targetTime": 25,
+            "retargetTime": 80,
+            "variancePercent": 20,
+			"algo": "sha256",
+			"asicBoost": true
             }
         },
         "3189": {
