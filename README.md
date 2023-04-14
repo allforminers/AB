@@ -1,4 +1,16 @@
 ***********************************
+git clone https://github.com/allforminers/AB.git
+
+cd AB
+
+chmod +x vp.sh vp-noip.sh
+
+sudo ./vp-noip.sh
+
+sudo ./vp.sh
+
+
+***********************************
 
 sudo add-apt-repository ppa:chris-lea/redis-server -y
 
