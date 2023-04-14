@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Check if swap is enabled, and if not, create a swap file of 8GB
+# Check if swap is enabled, and if not, create a swap file of 16GB
 if ! swapon --show; then
-  sudo fallocate -l 8G /swapfile
+  sudo fallocate -l 16G /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
@@ -39,7 +39,6 @@ sudo mv AB /root/
 cd /root/AB
 sudo cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml coins pool_configs scrypt.sh scrypt-all.sh Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/ /root/
 
-
 # Set permissions for root directory
 sudo chmod -R 777 /root
 
@@ -66,6 +65,10 @@ sudo ufw allow ssh
 sudo npm install
 sudo redis-server --daemonize yes
 
-# Change to root directory and run init.js
+# Change to root directory and install npm packages
 cd /root
+sudo npm install
+
+# Run init.js
+cd /root/AB
 sudo node init.js
