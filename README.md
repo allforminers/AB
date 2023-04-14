@@ -26,11 +26,11 @@ chmod +x vp.sh
 chmod +x vp-noip.sh
 
 
-sudo ./scrypt-all.sh
-
 sudo ./vp.sh
 
 **********
+
+sudo ./scrypt-all.sh
 
 sudo ./vp-noip.sh
 
