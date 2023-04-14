@@ -146,9 +146,16 @@ sudo ufw allow 17117/tcp
 
 sudo ufw allow 6379/tcp
 
-sudo ufw --force enable
+sudo ufw --force disable
 
 sudo ufw allow ssh
+
+
+firewall
+
+sudo ufw --force enable
+
+
 
 
 check status
