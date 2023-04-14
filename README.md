@@ -21,6 +21,11 @@ chmod +x scrypt-all.sh
 
 chmod +x scrypt.sh
 
+chmod +x vp.sh
+
+chmod +x vp-noip.sh
+
+
 sudo ./scrypt-all.sh
 
 sudo ./vp.sh
