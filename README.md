@@ -26,7 +26,7 @@ chmod +x vp.sh
 chmod +x vp-noip.sh
 
 
-sudo ./vp.sh
+sudo bash ./vp.sh
 
 **********
 
