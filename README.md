@@ -1,7 +1,7 @@
 ***********************************
 apt install git -y
 
-git clone https://github.com/allforminers/AB.git
+git clone https://github.com/allforminers/AB.git -y
 
 cd AB
 
