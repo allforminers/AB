@@ -2,5 +2,5 @@
   "name": "B",
     "symbol": "B",
     "algorithm": "sha256",
-    "version_mask": "1000"
+    "version_mask": "100000"
 }
