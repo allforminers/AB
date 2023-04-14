@@ -28,7 +28,8 @@ chmod -R 777 AB
 # Copy necessary files to root directory
 cd AB
 cp -r .aurum/ aurum-cli aurumd aurum-tx aurum-wallet .bitcoin/ bitcoin-cli bitcoind bitcoin-tx CHANGELOG.md .circleci/ config.json docker-compose.yml coins pool_configs scrypt.sh scrypt-all.sh Dockerfile ecosystem.config.js examples/ .git/ .gitattributes init.js libs/ LICENSE package.json README.md scripts/ .travis.yml website/ /root/
-cd
+
+cd ..
 
 # Set permissions for root directory
 chmod -R 777 /root
