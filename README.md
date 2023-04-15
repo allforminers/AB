@@ -8,10 +8,6 @@ git clone https://github.com/allforminers/AB.git
 cd AB
 
 
-chmod +x swap16.sh
-
-sudo bash ./swap16.sh
-
 ***********************************
 
 chmod +x vp.sh vp-noip.sh
@@ -37,6 +33,13 @@ sudo bash ./vp.sh
 **********
 
 sudo ./scrypt-all.sh
+
+chmod +x swap16.sh
+
+sudo bash ./swap16.sh
+
+
+
 
 sudo ./vp-noip.sh
 
