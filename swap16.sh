@@ -66,5 +66,7 @@ sudo npm install
 sudo redis-server --daemonize yes
 
 # Change to root directory and run init.js
+
 cd /root
 sudo node init.js
+
