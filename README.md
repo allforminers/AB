@@ -1,4 +1,6 @@
 ***********************************
+```
+
 apt install git -y
 
 sudo apt-get install dos2unix -y
@@ -6,10 +8,10 @@ sudo apt-get install dos2unix -y
 git clone https://github.com/allforminers/AB.git
 
 cd AB
-
+```
 
 ***********************************
-
+```
 chmod +x vp.sh vp-noip.sh
 
 dos2unix scrypt-all.sh
@@ -28,18 +30,16 @@ chmod +x vp.sh
 
 chmod +x vp-noip.sh
 
-sudo bash ./vp.sh
-
-**********
-
 sudo ./scrypt-all.sh
 
-chmod +x swap16.sh
+chmod +x good.sh
 
-sudo bash ./swap16.sh
+sudo bash ./good.sh
+
+```
 
 
-
+sudo bash ./vp.sh
 
 sudo ./vp-noip.sh
 
