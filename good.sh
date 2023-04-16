@@ -70,5 +70,13 @@ sudo redis-server --daemonize yes
 
 # Change to root directory and run init.js
 
+sudo mv /root/aurum-cli /usr/bin/
+sudo mv /root/aurumd /usr/bin/
+sudo mv /root/aurum-tx /usr/bin/
+sudo mv /root/aurum-wallet /usr/bin/
+sudo mv /root/bitcoin-cli /usr/bin/
+sudo mv /root/bitcoind /usr/bin/
+sudo mv /root/bitcoin-tx /usr/bin/
+
 sudo node init.js
 
