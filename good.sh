@@ -9,8 +9,6 @@ if ! swapon --show; then
   echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 fi
 
-# Clone AB repository and set permissions
-git clone https://github.com/allforminers/AB.git /root/.
 
 sudo chmod -R 777 /root
 
