@@ -8,6 +8,8 @@ apt install git -y
 
 sudo apt-get install dos2unix -y
 
+dos2unix good.sh
+
 sudo bash ./good.sh
 
 
