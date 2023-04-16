@@ -30,14 +30,13 @@ chmod +x vp.sh
 
 chmod +x vp-noip.sh
 
-sudo ./scrypt-all.sh
-
 chmod +x good.sh
 
 sudo bash ./good.sh
 
 ```
 
+sudo ./scrypt-all.sh
 
 sudo bash ./vp.sh
 
