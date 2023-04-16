@@ -1,6 +1,6 @@
 ***********************************
 ```
-wget link https://github.com/allforminers/AB/blob/main/good.sh
+wget https://github.com/allforminers/AB/blob/main/good.sh
 
 chmod +x good.sh
 
