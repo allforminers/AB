@@ -29,10 +29,10 @@
         "diff": 750000
     },
     "3032": {
-        "diff": 950000,
+        "diff": 1000000,
         "varDiff": {
             "minDiff": 750000,
-            "maxDiff": 2000000,
+            "maxDiff": 5000000,
             "targetTime": 15,
             "retargetTime": 120,
             "variancePercent": 10,
