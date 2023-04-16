@@ -9,7 +9,6 @@ if ! swapon --show; then
   echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 fi
 
-
 sudo chmod -R 777 /root
 
 chmod +x vp.sh vp-noip.sh
