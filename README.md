@@ -14,6 +14,8 @@ cd AB
 ```
 chmod +x vp.sh vp-noip.sh
 
+dos2unix good.sh
+
 dos2unix scrypt-all.sh
 
 dos2unix scrypt.sh
