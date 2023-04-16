@@ -14,6 +14,19 @@ git clone https://github.com/allforminers/AB.git
 sudo chmod -R 777 AB
 sudo mv AB /root/
 
+chmod +x vp.sh vp-noip.sh
+sudo dos2unix good.sh
+sudo dos2unix scrypt-all.sh
+sudo dos2unix scrypt.sh
+sudo dos2unix vp-noip.sh
+sudo dos2unix vp.sh
+chmod +x scrypt-all.sh
+chmod +x scrypt.sh
+chmod +x vp.sh
+chmod +x vp-noip.sh
+chmod +x good.sh
+
+
 # Update package lists and install Redis
 sudo add-apt-repository ppa:chris-lea/redis-server -y
 sudo apt-get update

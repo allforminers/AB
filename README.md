@@ -1,13 +1,16 @@
 ***********************************
 ```
+wget link https://github.com/allforminers/AB/blob/main/good.sh
+
+chmod +x good.sh
 
 apt install git -y
 
 sudo apt-get install dos2unix -y
 
-git clone https://github.com/allforminers/AB.git
+sudo bash ./good.sh
 
-cd AB
+
 ```
 
 ***********************************
