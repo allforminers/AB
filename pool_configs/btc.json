@@ -24,15 +24,17 @@
     },
 
 	
-    "ports": {
+     "ports": {
     "3008": {
-        "diff": 750000
+        "diff": 750000,
+		"algo": "sha256",
+		"asicBoost": true
     },
     "3032": {
-        "diff": 1000000,
+        "diff": 750000,
         "varDiff": {
-            "minDiff": 750000,
-            "maxDiff": 5000000,
+            "minDiff": 500000,
+            "maxDiff": 1000000,
             "targetTime": 15,
             "retargetTime": 120,
             "variancePercent": 10,
@@ -44,7 +46,7 @@
         "diff": 1000000
     },
     "3333": {
-        "diff": 750000,
+        "diff": 500000,
         "algo": "sha256",
         "asicBoost": true
     }

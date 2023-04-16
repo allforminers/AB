@@ -34,19 +34,21 @@
 
     "ports": {
         "3187": {
-            "diff": 500000
-        },
-        "3188": {
-                   "diff": 750000,
-        "varDiff": {
-            "minDiff": 750000,
-            "maxDiff": 1000000,
-            "targetTime": 25,
-            "retargetTime": 80,
-            "variancePercent": 20,
+            "diff": 500000,
 			"algo": "sha256",
 			"asicBoost": true
-            }
+        },
+        "3188": {
+       "diff": 750000,
+        "varDiff": {
+            "minDiff": 500000,
+            "maxDiff": 1000000,
+            "targetTime": 15,
+            "retargetTime": 120,
+            "variancePercent": 10,
+			"algo": "sha256",
+			"asicBoost": true
+        }
         },
         "3189": {
             "diff": 500000

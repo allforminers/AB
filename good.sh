@@ -2,7 +2,7 @@
 
 # Check if swap is enabled, and if not, create a swap file of 16GB
 if ! swapon --show; then
-  sudo fallocate -l 16G /swapfile
+  sudo fallocate -l 8G /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
