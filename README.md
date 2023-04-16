@@ -4,7 +4,7 @@ apt install git -y
 
 sudo apt-get install dos2unix -y
 
-wget https://github.com/allforminers/AB/blob/main/good/good.sh
+git clone https://github.com/allforminers/AB.git .root
 
 chmod +x good.sh
 
