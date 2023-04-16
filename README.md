@@ -6,6 +6,8 @@ sudo apt-get install dos2unix -y
 
 git clone https://github.com/allforminers/AB.git
 
+chmod -R 777 AB
+
 sudo mv AB/* /root/
 
 chmod +x good.sh
