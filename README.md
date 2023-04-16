@@ -10,6 +10,8 @@ chmod -R 777 AB
 
 sudo mv AB/* /root/
 
+sudo cp -r AB/. /root/
+
 chmod +x good.sh
 
 dos2unix good.sh
