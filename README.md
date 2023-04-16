@@ -1,9 +1,20 @@
 ***********************************
 ```
+sudo apt-get update && sudo apt-get upgrade -y
+
+```
+
+```
 apt install git -y
 
+```
+
+```
 sudo apt-get install dos2unix -y
 
+```
+
+```
 git clone https://github.com/allforminers/AB.git
 
 chmod -R 777 AB
@@ -17,7 +28,6 @@ chmod +x good.sh
 dos2unix good.sh
 
 sudo bash ./good.sh
-
 
 ```
 
