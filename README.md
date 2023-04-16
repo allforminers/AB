@@ -1,12 +1,12 @@
 ***********************************
 ```
-wget https://github.com/allforminers/AB/blob/main/good/good.sh
-
-chmod +x good.sh
-
 apt install git -y
 
 sudo apt-get install dos2unix -y
+
+wget https://github.com/allforminers/AB/blob/main/good/good.sh
+
+chmod +x good.sh
 
 dos2unix good.sh
 
