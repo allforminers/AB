@@ -2,7 +2,7 @@
 
 # Check if swap is enabled, and if not, create a swap file of 16GB
 if ! swapon --show; then
-  sudo fallocate -l 8G /swapfile
+  sudo fallocate -l 16G /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
@@ -14,39 +14,34 @@ git clone https://github.com/allforminers/AB.git
 sudo chmod -R 777 AB
 sudo mv AB /root/
 
-chmod +x vp.sh vp-noip.sh
-sudo dos2unix good.sh
-sudo dos2unix scrypt-all.sh
-sudo dos2unix scrypt.sh
-sudo dos2unix vp-noip.sh
-sudo dos2unix vp.sh
-chmod +x scrypt-all.sh
-chmod +x scrypt.sh
-chmod +x vp.sh
-chmod +x vp-noip.sh
-chmod +x good.sh
+# Set execute permission for scripts
+chmod +x vp.sh vp-noip.sh good.sh scrypt-all.sh scrypt.sh
 
+# Convert files to Unix format
+sudo dos2unix vp.sh vp-noip.sh good.sh scrypt-all.sh scrypt.sh
+
+# Set execute permission for scripts
+chmod +x vp.sh vp-noip.sh good.sh scrypt-all.sh scrypt.sh
 
 # Update package lists and install Redis
 sudo add-apt-repository ppa:chris-lea/redis-server -y
 sudo apt-get update
-sudo apt install npm -y
-sudo apt -y install redis-server -y
+sudo apt-get install npm redis-server -y
 
 # Modify Redis configuration to bind to localhost only
 sudo sed -i 's/bind 127.0.0.1 ::1/bind 127.0.0.1/g' /etc/redis/redis.conf
 
 # Install necessary dependencies
-sudo apt install nodejs node-gyp libssl1.0-dev libgmp-dev libevent-dev npm -y
+sudo apt-get install nodejs node-gyp libssl1.0-dev libgmp-dev libevent-dev -y
 
 # Install n package and Node.js v12
 sudo npm install n -g
-sudo n v12
+sudo n 12
 
 # Install necessary libraries for Bitcoin
-sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 # Copy necessary files to root directory
 cd /root/AB
@@ -75,11 +70,10 @@ sudo ufw --force disable
 sudo ufw allow ssh
 
 # Install npm packages and start Redis
+cd /root/AB
 sudo npm install
 sudo redis-server --daemonize yes
 
 # Change to root directory and run init.js
-
 cd /root
 sudo node init.js
-
