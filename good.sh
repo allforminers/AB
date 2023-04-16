@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# Check if swap is enabled, and if not, create a swap file of 8GB
-if ! swapon --show; then
-  sudo fallocate -l 8G /swapfile
-  sudo chmod 600 /swapfile
-  sudo mkswap /swapfile
-  sudo swapon /swapfile
-  echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-fi
+
 
 # Clone AB repository and set permissions
 git clone https://github.com/allforminers/AB.git
