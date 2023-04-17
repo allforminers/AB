@@ -11,16 +11,12 @@ fi
 
 sudo chmod -R 777 /root
 
-chmod +x vp.sh vp-noip.sh
+
 sudo dos2unix good.sh
 sudo dos2unix scrypt-all.sh
 sudo dos2unix scrypt.sh
-sudo dos2unix vp-noip.sh
-sudo dos2unix vp.sh
 chmod +x scrypt-all.sh
 chmod +x scrypt.sh
-chmod +x vp.sh
-chmod +x vp-noip.sh
 chmod +x good.sh
 
 
