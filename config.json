@@ -17,7 +17,7 @@
         "validateWorkerUsername": true,
         "tcpProxyProtocol": false,
         "banning": {
-            "enabled": true,
+            "enabled": false,
             "time": 600,
             "invalidPercent": 50,
             "checkThreshold": 500,
@@ -30,7 +30,7 @@
     },
 
     "website": {
-        "enabled": false,
+        "enabled": true,
         "host": "000.190.000.199",
         "port": 80,
         "stratumHost": "000.190.000.199",
