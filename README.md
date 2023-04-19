@@ -7,9 +7,6 @@ sudo apt-get update && sudo apt-get upgrade -y
 ```
 apt install git -y
 
-```
-
-```
 sudo apt-get install dos2unix -y
 
 ```
@@ -41,11 +38,11 @@ sudo mv AB/* /root/
 
 sudo cp -r AB/. /root/
 
-chmod +x good.sh
+chmod +x good2.sh
 
-dos2unix good.sh
+dos2unix good2.sh
 
-sudo bash ./good.sh
+sudo bash ./good2.sh
 
 ```
 
