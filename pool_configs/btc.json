@@ -4,17 +4,23 @@
     "coin": "btc.json",
 
     "address": "1GHAb64xdkQQF7yfLrU4VCdWbDCzJtpX5E",
-	"asicBoost": true,
+
 
     "rewardRecipients": {
         "1EpPFCPpPr1fY7VBGfVdTeq9noiWVATJQA": 0.0
 
     },
 
-    "paymentProcessing": {
+    "BTCover17": true,
+
+     "paymentProcessing": {
+	      "minConf": 102,
         "enabled": true,
-        "paymentInterval": 1200,
-        "minimumPayment": 1000000,
+        "paymentMode": "prop",
+        "_comment_paymentMode":"prop, pplnt",
+        "paymentInterval": 120,
+        "minimumPayment": 50000.0,
+        "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
             "port": 21402,
@@ -26,20 +32,18 @@
 	
     "ports": {
     "3008": {
-        "diff": 750000,
-		"algo": "sha256",
-		"asicBoost": true
+        "diff": 500000
+
     },
     "3032": {
-        "diff": 750000,
+        "diff": 500000,
         "varDiff": {
             "minDiff": 500000,
-            "maxDiff": 1000000,
+            "maxDiff": 500000,
             "targetTime": 15,
             "retargetTime": 120,
-            "variancePercent": 10,
-			"algo": "sha256",
-			"asicBoost": true
+            "variancePercent": 10
+
         }
     },
     "3256": {
