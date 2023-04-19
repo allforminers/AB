@@ -12,6 +12,10 @@ sudo apt-get install dos2unix -y
 ```
 
 ```
+sudo apt-get update && sudo apt-get install screen
+```
+
+```
 sudo fallocate -l 8G /swapfile
 
 sudo chmod 600 /swapfile
@@ -138,7 +142,9 @@ redis-server --daemonize yes
 
 or
 
-npm install multi-hashing
+npm install multi-hashing 
+
+for dedic
 
 
 
