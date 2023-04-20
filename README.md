@@ -46,10 +46,18 @@ chmod +x good2.sh
 
 dos2unix good2.sh
 
+chmod +x iptables-save.sh
+
+dos2unix iptables-save.sh
+
+sudo bash ./iptables-save.sh
+
 sudo bash ./good2.sh
 
 ```
+check status 
 
+iptables -L
 ***********************************
 ```
 chmod +x vp.sh vp-noip.sh
