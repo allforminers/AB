@@ -6,10 +6,12 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 ```
 apt install git -y
-
-sudo apt-get install dos2unix -y
+```
 
 ```
+sudo apt-get install dos2unix -y
+```
+
 
 ```
 sudo apt-get update && sudo apt-get install screen
