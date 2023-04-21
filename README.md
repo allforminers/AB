@@ -18,6 +18,15 @@ sudo apt-get update && sudo apt-get install screen
 ```
 
 ```
+chmod +x allworld.sh
+
+dos2unix allworld.sh
+
+sudo bash allworld.sh
+
+```
+
+```
 sudo fallocate -l 8G /swapfile
 
 sudo chmod 600 /swapfile
