@@ -25,7 +25,7 @@
         "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 21402,
+            "port": 8332,
             "user": "wedffhfgjkk",
             "password": "wefgfgglllll"
         }
@@ -61,7 +61,7 @@
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 21402,
+            "port": 8332,
             "user": "wedffhfgjkk",
             "password": "wefgfgglllll"
         }
