@@ -43,6 +43,7 @@
             "targetTime": 30,
             "retargetTime": 120,
             "variancePercent": 30
+			
 
         }
     },
