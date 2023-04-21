@@ -2,10 +2,8 @@
 
     "enabled": true,
     "coin": "btc.json",
-	"version_mask": "20000000",
-    "enabled": true,
 	
-    "address": "1GHAb64xdkQQF7yfLrU4VCdWbDCzJtpX5E",
+    "address": "1EmQHtbZVgE2WqLRvXEt7nSCogsuFtwT2t",
 
 
     "rewardRecipients": {
@@ -37,22 +35,22 @@
         "diff": 1000000
 
     },
-    "3032": {
-        "diff": 1500000,
+    "3333": {
+        "diff": 650000,
         "varDiff": {
             "minDiff": 500000,
             "maxDiff": 5000000,
-            "targetTime": 15,
+            "targetTime": 30,
             "retargetTime": 120,
-            "variancePercent": 10
+            "variancePercent": 30
 
         }
     },
     "3256": {
         "diff": 1000000
     },
-    "3333": {
-        "diff": 1500000,
+    "3032": {
+        "diff": 650000,
         "algo": "sha256",
         "asicBoost": true
     }
