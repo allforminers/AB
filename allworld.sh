@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt-get install ipset -y
+
+
 # Wykluczanie państw UE
 excluded="at\|be\|bg\|cy\|cz\|de\|dk\|ee\|es\|fi\|fr\|gr\|hr\|hu\|ie\|it\|lt\|lu\|lv\|mt\|nl\|pl\|pt\|ro\|se\|si\|sk"
 
