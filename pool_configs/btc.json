@@ -51,7 +51,7 @@
         "diff": 1000000
     },
     "3032": {
-        "diff": 650000,
+        "diff": 6500000,
         "algo": "sha256",
         "asicBoost": true
     }
