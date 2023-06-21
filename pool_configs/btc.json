@@ -13,12 +13,12 @@
 
     "BTCover17": true,
 
-     "paymentProcessing": {
+      "paymentProcessing": {
 	      "minConf": 102,
-        "enabled": true,
+        "enabled": false,
         "paymentMode": "prop",
         "_comment_paymentMode":"prop, pplnt",
-        "paymentInterval": 120,
+        "paymentInterval": 900,
         "minimumPayment": 50000.0,
         "maxBlocksPerPayment": 3,
         "daemon": {
@@ -35,14 +35,14 @@
         "diff": 1000000
 
     },
-       "3333": {
-        "diff": 650000,
+       "3032": {
+        "diff": 500000,
         "varDiff": {
             "minDiff": 500000,
-            "maxDiff": 5000000,
-            "targetTime": 40,
-            "retargetTime": 120,
-            "variancePercent": 20
+            "maxDiff": 50000000,
+            "targetTime": 4000,
+            "retargetTime": 4500,
+            "variancePercent": 60
 			
 
         }
